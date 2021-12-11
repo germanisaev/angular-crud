@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app-discont"
+    }
+  },
+  "defaultProject": "app-discont",
+  "cli": {
+    "analytics": "3d38f344-f6f6-4130-9c5e-dfe7ff0c9899"
+  }
 }

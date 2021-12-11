@@ -1,0 +1,42 @@
+<div *ngIf="user">
+    <form [formGroup]="detailForm" (ngSubmit)="onSubmit()">
+        <input [hidden]="true" formControlName="id">
+        <div class="form-group">
+            <label for="firstName">first Name</label>
+            <input type="text" formControlName="firstName" class="form-control"
+                [ngClass]="{ 'is-invalid': f.firstName.errors?.required && f.firstName.touched }" />
+            <div *ngIf="f.firstName.errors?.required && f.firstName.touched" class="error">
+                *first Name is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">last Name</label>
+            <input type="text" formControlName="lastName" class="form-control"
+                [ngClass]="{ 'is-invalid': f.lastName.errors?.required && f.lastName.touched }" />
+            <div *ngIf="f.lastName.errors?.required && f.lastName.touched" class="error">
+                *last Name is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="username">username</label>
+            <input type="text" formControlName="username" class="form-control"
+                [ngClass]="{ 'is-invalid': f.username.errors?.required && f.username.touched }" />
+            <div *ngIf="f.username.errors?.required && f.username.touched" class="error">
+                *username is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">password</label>
+            <input type="text" formControlName="password" class="form-control"
+                [ngClass]="{ 'is-invalid': f.password.errors?.required && f.password.touched }" />
+            <div *ngIf="f.password.errors?.required && f.password.touched" class="error">
+                *password is required
+            </div>
+        </div>
+       
+        <div class="form-group card-button-save">
+            <button type="submit" class="btn btn-success" [disabled]="!detailForm.valid">Save</button>
+        </div>
+    </form>
+</div>
+

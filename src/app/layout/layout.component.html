@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <app-table-edit [user]="user"></app-table-edit>
+        </div>
+        <div class="col-md-8">
+            <app-table-list [users]="users" (userSelected)='selected($event)'></app-table-list>
+        </div>
+    </div>
+</div>
